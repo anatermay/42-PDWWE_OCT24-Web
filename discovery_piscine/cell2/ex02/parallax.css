@@ -19,7 +19,7 @@ body {
 
 .parallax {
 	display: flex;
-	min-height: 100vh;
+	min-height: 30%;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;

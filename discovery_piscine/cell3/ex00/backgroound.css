@@ -1,0 +1,11 @@
+button {
+	background-color: black;
+	color: whitesmoke;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	height: 150px;
+	vertical-align: middle;
+}

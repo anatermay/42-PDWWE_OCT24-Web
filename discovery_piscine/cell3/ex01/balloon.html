@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Balloon</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			border-top-left-radius: 100%;
+			border-top-right-radius: 100%;
+			border-bottom-left-radius: 100%;
+			border-bottom-right-radius: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<script>
+		balloon = document.querySelector("div")
+		size = 200
+		width = balloon.style.width = 200
+		height = balloon.style.height = 200
+		function changeColor() {
+			if (balloon.style.backgroundColor == "red") {
+				balloon.style.backgroundColor = "green"
+			} else if (balloon.style.backgroundColor == "green") {
+				balloon.style.backgroundColor = "blue"
+			} else {
+				balloon.style.backgroundColor = "red"
+			}
+		}
+		function changeSize()
+		{
+			balloon.style.width = size + "px"
+			balloon.style.height = size + "px"
+		}
+		balloon.addEventListener('click', () => {
+			if (size <= 420) {
+				size += 10
+				
+			}
+			if (size >= 420) {
+				size = 200
+			}
+			changeColor()
+			
+			balloon.style.width = size + "px";
+			balloon.style.height = size + "px";
+			console.log("size",size)
+		}
+		)
+	</script>
+</body>
+</html>
