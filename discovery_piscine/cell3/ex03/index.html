@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ToDoList</title>
+	<style>
+		#ft_list {
+			padding: 10px;
+			width: 300px;
+		}
+		#ft_list div {
+			margin-bottom: 5px;
+			padding: 8px;
+			border: 1px solid #ccc;
+			cursor: pointer;
+		}
+		#add-task-btn {
+			padding: 10px;
+			background-color: #000000;
+			color: white;
+			border: none;
+			cursor: pointer;
+		}
+		#task-prompt {
+			display: block;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: white;
+			padding: 20px;
+			margin: 3px;
+			align-content: center;
+			border: 1px solid #ccc;
+		}
+		#task-prompt.hidden {
+			display: none;
+		}
+		#task-input {
+			width: 90%;
+			padding: 8px;
+			margin-bottom: 10px;
+			border: 1px solid #ccc;
+		}
+		#confirm-task-btn, #cancel-task-btn {
+			padding: 8px;
+			background-color: #000000;
+			color: white;
+			border: none;
+			cursor: pointer;
+			margin-right: 5px;
+		}
+		#confirm-task-btn:hover, #cancel-task-btn:hover, #add-task-btn:hover {
+			background-color: antiquewhite;
+			color: black;
+			border: black 3px solid;
+			border-radius: 9% 9% 9% 9%;
+		}
+		body {
+			background-color: rgb(254, 242, 224);
+			padding: 21px;
+		}
+		hr {
+			border: 1px solid #c0c0c0;
+		}
+		h1 {
+			font-family: 'Courier New', Courier, monospace;
+		}
+		.add-btn {
+			padding: 10px;
+			width: 100%;
+			background-color: #000000;
+			color: white;
+			border: none;
+			cursor: pointer;
+		}
+		.control-panel {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<main class="main" id="main">
+			<div class="todo">
+				<h1>To Do list</h1>
+				<hr>
+				<div class="control-panel">
+					<button class="add-btn" id="add-task-btn">New</button>
+				</div>
+				<div id="ft_list">
+				</div>
+				<div id="task-prompt" class="hidden">
+					<label for="task-input">Enter a task:</label>
+					<input type="text" id="task-input">
+					<button id="confirm-task-btn">Add</button>
+					<button id="cancel-task-btn">Cancel</button>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script type="text/javascript" src="./todo.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Balloon</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+		*, *::before, *::after{
+            box-sizing: border-box; 
+        }
+
+        body{
+            font-family: Georgia, serif, monospace;
+            margin: 0;
+            padding: 21px;
+        }
+
+        h1 {
+            text-align: right;
+            font-size: 42px;
+            font-style: bold;
+            margin: 18px;
+        }
+
+        hr {
+            border: 3px solid #c0c0c0;
+            box-shadow: 3px 3px 3px black;
+        }
+
+        h2 {
+            text-align: left;
+            font-size: 24px;
+            font-style: bold;
+            margin: 18px;
+            box-shadow: 3px 0px 3px 0px #c0c0c0;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 12px;
+            font-style: italic;
+            margin: 18px;
+            opacity: 30%;
+            color: rgb(61, 61, 61);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 18px;
+            font-style: italic;
+            margin: 18px;
+            color: #c0c0c0;
+            vertical-align: bottom;
+        }
+
+        img {
+            filter: brightness(1.1);
+            mix-blend-mode: multiply;
+        }
+
+        button {
+            background-color: black;
+            width: 100%;
+            border: none;
+            color: whitesmoke;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c0c0c0;
+            border: black 3px;
+            color: black;
+        }
+
+        #bgColor {
+            width: 80%;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            margin-left: 18px;
+        }
+
+        .balloon {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			border-top-left-radius: 100%;
+			border-top-right-radius: 100%;
+			border-bottom-left-radius: 100%;
+			border-bottom-right-radius: 100%;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            vertical-align: center;
+            margin: auto;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+	</style>
+</head>
+<body>
+	<h1>HCJs</h1>
+    <h2>Exercise 01</h2>
+	<p>~/Cell0/ex01/balloon*</p>
+	<hr>
+	<div class="balloon"></div>
+	<script type="text/javascript">
+		colors = ["#FF0000", "#00FF00", "#0000FF"];
+		width = 200;
+		height = 200;
+		i = 0;
+		j = colors.length;
+		$('.balloon').click(function() {
+			width += 10;
+			height += 10;
+			if (width >= 420 || (width + 10) >= 420) {
+				width = 200;
+				height = 200;
+			}
+			$(this).css('width', width);
+			$(this).css('height', height);
+			$(this).css('background-color', colors[i]);
+			i++;
+			if (i == colors.length) {
+				i = 0;
+			}
+		});
+		$('.balloon').mouseout(function() {
+			width -= 5;
+			height -= 5;
+			if (width <= 200 || (width - 5) <= 200) {
+				width = 200;
+				height = 200;
+			}
+			$(this).css('width', width);
+			$(this).css('height', height);
+			$(this).css('background-color', colors[j]);
+			j--;
+			if (j < 0) {
+				j = colors.length - 1;
+			}
+		})
+	</script>
+    <p></p>
+	<hr>
+	<footer class="footer">
+		<div class="content">
+			<img src="https://www.inspireuplift.com/resizer/?image=https://cdn.inspireuplift.com/uploads/images/seller_products/31661/1702971299_TairnandAndarna.png&width=600&height=600&quality=90&format=auto&fit=pad" style="height: 150px; width: 150px;">
+			<p style="font-style: italic; text-align: center;">© aternero 2024</p>
+		</div>
+	</footer>
+</body>
+</html>

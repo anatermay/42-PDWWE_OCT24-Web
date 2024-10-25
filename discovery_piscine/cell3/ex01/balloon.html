@@ -19,34 +19,61 @@
 <body>
 	<div></div>
 	<script>
-		balloon = document.querySelector("div")
-		size = 200
-		width = balloon.style.width = 200
-		height = balloon.style.height = 200
-		function changeColor() {
+		balloon = document.querySelector("div");
+		size = 200;
+		let color = 'red';
+		width = balloon.style.width = 200;
+		height = balloon.style.height = 200;
+		function changeColor(color) {
 			if (balloon.style.backgroundColor == "red") {
-				balloon.style.backgroundColor = "green"
-			} else if (balloon.style.backgroundColor == "green") {
 				balloon.style.backgroundColor = "blue"
-			} else {
+			} else if (balloon.style.backgroundColor == "blue") {
 				balloon.style.backgroundColor = "red"
+			} else {
+				balloon.style.backgroundColor = "green"
 			}
 		}
 		function changeSize()
 		{
-			balloon.style.width = size + "px"
-			balloon.style.height = size + "px"
+			balloon.style.width = size + "px";
+			balloon.style.height = size + "px";
 		}
 		balloon.addEventListener('click', () => {
 			if (size <= 420) {
-				size += 10
-				
+				size += 10;
 			}
 			if (size >= 420) {
+				size = 200;
+			}
+			color = changeColor(color)
+			
+			balloon.style.width = size + "px";
+			balloon.style.height = size + "px";
+		}
+		)
+		function changeColorInverse() {
+			if (balloon.style.backgroundColor == "red") {
+				balloon.style.backgroundColor = "blue"
+			} else if (balloon.style.backgroundColor == "green") {
+				balloon.style.backgroundColor = "red"
+			} else {
+				balloon.style.backgroundColor = "green"
+			}
+		}
+		function changeSizeInverse()
+		{
+			balloon.style.width = size + "px"
+			balloon.style.height = size + "px"
+		}
+		balloon.addEventListener('mouseout', () => {
+			if (size >= 200) {
+				size -= 5
+				
+			}
+			if (size <= 200) {
 				size = 200
 			}
-			changeColor()
-			
+			changeColorInverse()
 			balloon.style.width = size + "px";
 			balloon.style.height = size + "px";
 			console.log("size",size)

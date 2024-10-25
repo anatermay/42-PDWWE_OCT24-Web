@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calc</title>
+</head>
+<style>
+	*, *::before, *::after{
+		box-sizing: border-box; 
+	}
+	body {
+		height: 100vh; 
+		scroll-behavior: smooth; 
+		margin: 0;
+        font-family: Georgia, serif, monospace;
+		font-size: 18px;
+		background-color: aliceblue;
+	}
+	.container {
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+		padding: 0 10px;
+	}
+	.main {
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+	}
+	.footer {
+		color: #c0c0c0;
+		background: #fff;
+		text-align: center;
+		padding: 30px;
+		box-shadow: 0 -2px 2px -2px #000;
+	}
+	.calc {
+		width: 350px;
+		height: 500px;
+		border-radius: 4px;
+		box-shadow: 0 0 6px 0 #000;
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+	}
+	.calc-controls {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		gap: 5px;
+		padding: 10px 0;
+	}
+	.calc-result-field,
+	.count-part {
+		max-width: 38%;
+		background: #000;
+		border: none;
+		border-radius: 3px;
+		color: #fff;
+		font-size: 28px;
+		font-weight: bold;
+		padding: 5px 10px;
+	}
+	.input-submit {
+		width: 100%;
+		padding: 12px 10px;
+		border: none;
+		border-radius: 3px;
+		background: #000;
+		color: #fff;
+		margin-top: 25px;
+	}
+	.calc-result-field {
+		width: 100%;
+		max-width: 100%;
+		height: 150px;
+		padding: 10px 15px;
+		text-align: end;
+	}
+	.calc-body {
+		flex: 1 1 auto;
+	}
+	.calc-footer {
+		margin-top: 16px;
+		box-shadow: 0 -2px 2px -2px #fff;
+	}
+	.count-part {
+		text-align: center;
+		font-size: 18px;
+		font-family: Georgia, serif, monospace;
+	}
+</style>
+<body>
+	<div class="container">
+			<h3>It’s over 9000</h3>
+		</header>
+		<main class="main" id="main">
+			<div>
+				<form id="calculator" class="calc">
+					<div class="calc-body">
+						<div class="calc-controls">
+							<input class="count-part"
+								type="number"
+								name="num1"
+								id="num1"
+								min="0"
+								step="1"
+								placeholder="Num 1"
+								required>
+							<select class="count-part" name="" id="operator">
+								<option value="+">+</option>
+								<option value="-">-</option>
+								<option value="*">*</option>
+								<option value="/">/</option>
+								<option value="%">%</option>
+							</select>
+							<input class="count-part"
+								type="number"
+								name="num2"
+								id="num2"
+								min="0"
+								step="1"
+								placeholder="Num 2"
+								required>
+						</div>
+						<input class="input-submit" type="submit" value="Try me!" />
+					</div>
+					<div class="calc-footer">
+						<input class="calc-result-field" type="text" id="result" placeholder="Result" readonly>
+					</div>
+				</form>
+			</div>
+		</main>
+        <footer class="footer">
+            <div class="content">
+                <img src="https://www.inspireuplift.com/resizer/?image=https://cdn.inspireuplift.com/uploads/images/seller_products/31661/1702971299_TairnandAndarna.png&width=600&height=600&quality=90&format=auto&fit=pad" style="height: 150px; width: 150px;">
+                <p style="font-style: italic">© aternero 2024</p>
+            </div>
+        </footer>
+	</div>
+
+	<script>
+		const calculatorForm = document.getElementById('calculator');
+		const num1Input = document.getElementById('num1');
+		const num2Input = document.getElementById('num2');
+		const operatorSelect = document.getElementById('operator');
+		const resultField = document.getElementById("result");
+
+		calculatorForm.addEventListener('submit', function(event) {
+			event.preventDefault();
+			const num1 = parseInt(num1Input.value);
+			const num2 = parseInt(num2Input.value);
+			const operator = operatorSelect.value;
+			if (num1 < 0 || num2 < 0) {
+                alert('Error :(');
+				resultField.value = 'Error :(';
+				return ;
+			}
+			let result;
+			switch (operator) {
+				case '+':
+					result = num1 + num2;
+					break;
+				case '-':
+					result = num1 - num2;
+					break;
+				case '*':
+					result = num1 * num2;
+					break;
+				case '/':
+					if (num2 === 0) {
+						resultField.value = 'It’s over 9000!';
+						console.log('Error: Division by zero');
+						return;
+					}
+					result = num1 / num2;
+					break;
+				case '%':
+					if (num2 === 0) {
+						resultField.value = 'It’s over 9000!';
+						console.log('Error: Modulo by zero');
+						return;
+					}
+					result = num1 % num2;
+					break;
+				default:
+					console.error('Invalid operator:', operator);
+					return;
+			}
+			resultField.value = result;
+			console.log('Calculation result:', result);
+		});
+        setInterval(function() {
+            alert('Please, use me...');
+        }, 30000);
+	</script>
+</body>
+</html>

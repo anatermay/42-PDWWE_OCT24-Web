@@ -1,0 +1,82 @@
+*, *::before, *::after{
+	box-sizing: border-box; 
+}
+
+body{
+	font-family: Georgia, serif, monospace;
+	margin: 0;
+	padding: 21px;
+}
+
+h1 {
+	text-align: right;
+	font-size: 42px;
+	font-style: bold;
+	margin: 18px;
+}
+
+hr {
+	border: 3px solid #c0c0c0;
+	box-shadow: 3px 3px 3px black;
+}
+
+h2 {
+	text-align: left;
+	font-size: 24px;
+	font-style: bold;
+	margin: 18px;
+	box-shadow: 3px 0px 3px 0px #c0c0c0;
+}
+
+p {
+	text-align: justify;
+	font-size: 12px;
+	font-style: italic;
+	margin: 18px;
+	opacity: 30%;
+	color: rgb(61, 61, 61);
+}
+
+footer {
+	text-align: center;
+	font-size: 18px;
+	font-style: italic;
+	margin: 18px;
+	color: #c0c0c0;
+	vertical-align: bottom;
+}
+
+img {
+	filter: brightness(1.1);
+	mix-blend-mode: multiply;
+}
+
+button {
+	background-color: black;
+	width: 100%;
+	border: none;
+	color: whitesmoke;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	height: 150px;
+	vertical-align: middle;
+}
+
+button:hover {
+	background-color: #c0c0c0;
+	border: black 3px;
+	color: black;
+}
+
+#bgColor {
+	width: 90%;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	margin-left: 18px;
+}
