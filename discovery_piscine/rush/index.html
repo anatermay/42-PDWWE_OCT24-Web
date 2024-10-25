@@ -1,50 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="index.css">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vitae</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-	<header class="header">
-		<div class="image">
-			<a href="https://www.instagram.com/anatermay/" class="ln_image" target="_blank">
-				<img src="https://i.etsystatic.com/37641249/r/il/10bd4e/4209799661/il_570xN.4209799661_ldaq.jpg" class="img" alt="anatermay" style="box-shadow: #000000 21px; height: 120px; width: auto;">
-			</a>
+	<section style="background-image: url('https://i.pinimg.com/originals/5e/e2/ee/5ee2ee57feed8a17a7a5c1672f24cb2f.png'); background-repeat: no-repeat; background-size: cover;">
+		<header class="header">
+			<div class="image">
+				<a href="https://fycma.com/evento/leadingirls-2024/" class="ln_image">
+					42 Málaga Fundación Telefónica
+				</a>
+			</div>
+			<nav class="navegation">
+				<div class="menu" id="menu">
+					<input class="trigger" type="checkbox">
+					<span class="burger-line"></span>
+					<span class="burger-line"></span>
+					<span class="burger-line"></span>
+					<ul class="list" id="menu">
+						<li>
+							<a href="https://www.fundaciontelefonica.com/empleabilidad/campus-42/" target="_blank" class="link">
+								42 Málaga Fundación Telefónica
+							</a>
+						</li>
+						<li>
+							<a href="#CV1" target="_blank" class="link">
+								Currículum Vitae #1
+							</a>
+						</li>
+						<li>
+							<a href="#CV2" target="_blank" class="link">
+								Currículum Vitae #2
+							</a>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<div class="container text-center mt-5">
+			<h1>Currículum Vitae</h1>
+			<hr>
+			<p style="text-align: right; color: white; font-size: larger; opacity: 100%;">Bienvenido a mi sitio web de currículum vitae. Selecciona uno de los siguientes enlaces para ver los detalles.</p>
+			<a href="#CV1" class="btn btn-primary m-2">CV 1</a>
+			<a href="#CV2" class="btn btn-primary m-2">CV 2</a>
 		</div>
-		<nav class="navegation">
-			<div class="menu" id="menu">
-				<input class="trigger" type="checkbox">
-				<span class="burger-line"></span>
-				<span class="burger-line"></span>
-				<span class="burger-line"></span>
-				<ul class="list" id="menu">
-					<li>
-						<a href="https://www.github.com/anatermayh" class="link" target="_blank">
-							GitHub
-						</a>
-					</li>
+	</section>
+	<section id="CV1">
+		<div class="container mt-5 pt-5">
+			<div id="profile" class="section">
+				<h2>Perfil</h2>
+				<img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg" alt="Foto de perfil" class="img-fluid rounded-circle">
+				<h3>Nombre Apellido</h3>
+				<p>Cargo</p>
+			</div>
+			<div id="experience" class="section">
+				<h2>Experiencia y Habilidades</h2>
+				<p>Descripción de la experiencia y habilidades.</p>
+				<p class="p_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			</div>
+			<div id="contact" class="section">
+				<h2>Contacto</h2>
+				<p>Enlaces para contactar con la persona.</p>
+				<ul>
+					<li><a href="#" class="a_contact">RRSS</a></li>
+					<li><a href="#" class="a_contact">PHONE</a></li>
+					<li><a href="#" class="a_contact">MAIL</a></li>
+					<li><a href="#" class="a_contact">STREET</a></li>
+					<li><a href="#" class="a_contact">NEWSLETTER</a></li>
 				</ul>
 			</div>
-		</nav>
-	</header>
-
-	<div class="container">
-		<section class="parallax">
-		</section>
-
-		<section>
-		</section>
-
-		<section class="parallax">
-		</section>
-	</div>
-
+		</div>
+	</section>
+	<hr>
+	<section id="CV2">
+		<div class="container mt-5 pt-5">
+			<div id="profile" class="section">
+				<h2>Perfil</h2>
+				<img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg" alt="Foto de perfil" class="img-fluid rounded-circle">
+				<h3>Nombre Apellido</h3>
+				<p>Cargo</p>
+			</div>
+			<div id="experience" class="section">
+				<h2>Experiencia y Habilidades</h2>
+				<p>Descripción de la experiencia y habilidades.</p>
+				<p class="p_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			</div>
+			<div id="contact" class="section">
+				<h2>Contacto</h2>
+				<p>Enlaces para contactar con la persona.</p>
+				<ul>
+					<li><a href="#" class="a_contact">RRSS</a></li>
+					<li><a href="#" class="a_contact">PHONE</a></li>
+					<li><a href="#" class="a_contact">MAIL</a></li>
+					<li><a href="#" class="a_contact">STREET</a></li>
+					<li><a href="#" class="a_contact">NEWSLETTER</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<hr>
 	<footer class="footer">
 		<div class="content">
 			<img src="https://www.inspireuplift.com/resizer/?image=https://cdn.inspireuplift.com/uploads/images/seller_products/31661/1702971299_TairnandAndarna.png&width=600&height=600&quality=90&format=auto&fit=pad" style="height: 150px; width: 150px;">
-			<p style="font-style: italic">© aternero 2024</p>
+			<p style="font-style: italic; text-align: center;">© aternero 2024</p>
 		</div>
 	</footer>
 </body>
